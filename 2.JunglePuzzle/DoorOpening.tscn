@@ -1,0 +1,392 @@
+[gd_scene format=3 uid="uid://bvdi2anyxrds2"]
+
+[ext_resource type="Script" uid="uid://gw5p2wak5svc" path="res://Puzzler.gd" id="1_mub0s"]
+[ext_resource type="Script" uid="uid://c3v517mqnv7x" path="res://playerMovement.gd" id="1_rc7l0"]
+[ext_resource type="Script" uid="uid://d2ohqfxo0efuh" path="res://door.gd" id="2_2nuw4"]
+[ext_resource type="Script" uid="uid://bmu5t1rbl72s3" path="res://pressure_plate.gd" id="2_w0jp4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08w04"]
+albedo_color = Color(0, 0.54525805, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qtdp2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qtdp2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ax40n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxmjt"]
+albedo_color = Color(0.28371003, 0.49843556, 0.3013584, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08w04"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rc7l0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itrvt"]
+albedo_color = Color(0.5411765, 0.44705883, 0.3019608, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2nuw4"]
+size = Vector3(1, 1, 1.0087891)
+
+[sub_resource type="BoxMesh" id="BoxMesh_08w04"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4lha"]
+albedo_color = Color(0.5411765, 0.44705883, 0.3019608, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtdp2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3otid"]
+albedo_color = Color(0.5411765, 0.44705883, 0.3019608, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhs5c"]
+albedo_color = Color(0.5411765, 0.44705883, 0.3019608, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtdp2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8p1p"]
+albedo_color = Color(0.5411765, 0.44705883, 0.3019608, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ax40n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j71u7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq05o"]
+albedo_color = Color(0.5411765, 0.44705883, 0.3019608, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tsudy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1egxq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqfiv"]
+albedo_color = Color(0.5411765, 0.44705883, 0.3019608, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpnhj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6imvn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mub0s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogmh0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxmjt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okjwc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tx8y7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1se5u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c41vy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_v8j27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70vr3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fejr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rgyxr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4tj1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u72jw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bnk0g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_egiq8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rj1o0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ehrvu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a14k8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6684i"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tsudy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_phshi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_uxmjt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0oo8a"]
+albedo_color = Color(0.42352942, 0.34509805, 0.27058825, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_itrvt"]
+
+[node name="Puzzle" type="Node3D" unique_id=1736771948]
+script = ExtResource("1_mub0s")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=569216108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1385729, -58.35893)
+script = ExtResource("1_rc7l0")
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=292466181]
+transform = Transform3D(-1, -8.742279e-08, -1.5709705e-14, -8.145797e-08, 0.93177056, 0.36304826, -3.173867e-08, 0.36304826, -0.93177056, 0.15155065, 3.9057376, -5.217991)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1300739485]
+material_override = SubResource("StandardMaterial3D_08w04")
+mesh = SubResource("CapsuleMesh_qtdp2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1947421121]
+shape = SubResource("CapsuleShape3D_qtdp2")
+debug_color = Color(0.96862745, 0.003921569, 0, 0.41960785)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1159403883]
+transform = Transform3D(116.609, 0, 0, 0, 0.222, 0, 0, 0, 135.51154, 1.4788643, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=658313706]
+mesh = SubResource("BoxMesh_ax40n")
+surface_material_override/0 = SubResource("StandardMaterial3D_uxmjt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1851727634]
+shape = SubResource("BoxShape3D_08w04")
+
+[node name="Right Wall" type="StaticBody3D" parent="." unique_id=677794605]
+transform = Transform3D(1, 0, 0, 0, 20.772018, 0, 0, 0, 131.548, -56.247055, 10.775568, -0.18751812)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Right Wall" unique_id=453050263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0170814, 0, 0, 0)
+mesh = SubResource("BoxMesh_rc7l0")
+surface_material_override/0 = SubResource("StandardMaterial3D_itrvt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Right Wall" unique_id=2054391876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00439453)
+shape = SubResource("BoxShape3D_2nuw4")
+
+[node name="Left Wall" type="StaticBody3D" parent="." unique_id=1501574110]
+transform = Transform3D(1, 0, 0, 0, 20.772018, 0, 0, 0, 135.08452, 59.370766, 10.775568, -0.18751812)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Left Wall" unique_id=210420603]
+mesh = SubResource("BoxMesh_08w04")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4lha")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Left Wall" unique_id=227137566]
+shape = SubResource("BoxShape3D_qtdp2")
+
+[node name="Upper wall" type="StaticBody3D" parent="." unique_id=732394070]
+transform = Transform3D(-4.371139e-08, 0, 116.720055, 0, 20.772018, 0, -1, 0, -5.1019956e-06, 1.0101471, 10.775568, 67.25749)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Upper wall" unique_id=1421378767]
+mesh = SubResource("BoxMesh_08w04")
+surface_material_override/0 = SubResource("StandardMaterial3D_3otid")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Upper wall" unique_id=1466883410]
+shape = SubResource("BoxShape3D_qtdp2")
+
+[node name="Lower wall" type="StaticBody3D" parent="." unique_id=559613719]
+transform = Transform3D(-4.371139e-08, 0, 116.720055, 0, 20.772018, 0, -1, 0, -5.1019956e-06, 1.0101471, 10.775568, -67.66058)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lower wall" unique_id=1078942702]
+mesh = SubResource("BoxMesh_08w04")
+surface_material_override/0 = SubResource("StandardMaterial3D_mhs5c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lower wall" unique_id=959473832]
+shape = SubResource("BoxShape3D_qtdp2")
+
+[node name="Middlewall left" type="StaticBody3D" parent="." unique_id=635195597]
+transform = Transform3D(45.49955, 0, 0, 0, 28.373125, 0, 0, 0, 1, 36.45006, 7.103571, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Middlewall left" unique_id=1073459942]
+mesh = SubResource("BoxMesh_qtdp2")
+surface_material_override/0 = SubResource("StandardMaterial3D_x8p1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Middlewall left" unique_id=106049197]
+shape = SubResource("BoxShape3D_ax40n")
+
+[node name="Middlewall Arch" type="StaticBody3D" parent="." unique_id=1798886255]
+transform = Transform3D(30.427208, 0, 0, 0, 13.54806, 0, 0, 0, 1, -1.4484539, 14.51178, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Middlewall Arch" unique_id=540020746]
+mesh = SubResource("BoxMesh_j71u7")
+surface_material_override/0 = SubResource("StandardMaterial3D_mq05o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Middlewall Arch" unique_id=528820490]
+shape = SubResource("BoxShape3D_tsudy")
+
+[node name="Middlewall Right" type="StaticBody3D" parent="." unique_id=1985703919]
+transform = Transform3D(40.066814, 0, 0, 0, 29.067612, 0, 0, 0, 1, -36.520344, 6.695447, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Middlewall Right" unique_id=514182344]
+mesh = SubResource("BoxMesh_1egxq")
+surface_material_override/0 = SubResource("StandardMaterial3D_yqfiv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Middlewall Right" unique_id=112968813]
+shape = SubResource("BoxShape3D_kpnhj")
+
+[node name="PressurePlate1" type="Area3D" parent="." unique_id=944185161]
+transform = Transform3D(5.6959586, 0, 0, 0, 0.40564352, 0, 0, 0, 4.614889, 42.863995, 0, -20.954094)
+script = ExtResource("2_w0jp4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate1" unique_id=194450207]
+material_override = SubResource("StandardMaterial3D_6imvn")
+mesh = SubResource("BoxMesh_mub0s")
+surface_material_override/0 = SubResource("StandardMaterial3D_ogmh0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate1" unique_id=391633394]
+shape = SubResource("BoxShape3D_uxmjt")
+
+[node name="Timer" type="Timer" parent="PressurePlate1" unique_id=1678986302]
+wait_time = 2.5
+
+[node name="PressurePlate2" type="Area3D" parent="." unique_id=1239773174]
+transform = Transform3D(5.6959586, 0, 0, 0, 0.40564352, 0, 0, 0, 4.614889, 31.982471, 0, -20.954094)
+script = ExtResource("2_w0jp4")
+plateNumber = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate2" unique_id=795700538]
+material_override = SubResource("StandardMaterial3D_okjwc")
+mesh = SubResource("BoxMesh_tx8y7")
+surface_material_override/0 = SubResource("StandardMaterial3D_1se5u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate2" unique_id=1097422741]
+shape = SubResource("BoxShape3D_uxmjt")
+
+[node name="Timer" type="Timer" parent="PressurePlate2" unique_id=1689272446]
+wait_time = 2.5
+
+[node name="PressurePlate3" type="Area3D" parent="." unique_id=964531133]
+transform = Transform3D(5.6959586, 0, 0, 0, 0.40564352, 0, 0, 0, 4.614889, 20.144108, 0, -20.954094)
+script = ExtResource("2_w0jp4")
+plateNumber = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate3" unique_id=1686619271]
+material_override = SubResource("StandardMaterial3D_c41vy")
+mesh = SubResource("BoxMesh_v8j27")
+surface_material_override/0 = SubResource("StandardMaterial3D_70vr3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate3" unique_id=1038264660]
+shape = SubResource("BoxShape3D_uxmjt")
+
+[node name="Timer" type="Timer" parent="PressurePlate3" unique_id=7610951]
+wait_time = 2.5
+
+[node name="PressurePlate4" type="Area3D" parent="." unique_id=1761277069]
+transform = Transform3D(5.6959586, 0, 0, 0, 0.40564352, 0, 0, 0, 4.614889, 7.3180885, 0, -20.954094)
+script = ExtResource("2_w0jp4")
+plateNumber = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate4" unique_id=482430337]
+material_override = SubResource("StandardMaterial3D_0fejr")
+mesh = SubResource("BoxMesh_rgyxr")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4tj1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate4" unique_id=1761738824]
+shape = SubResource("BoxShape3D_uxmjt")
+
+[node name="Timer" type="Timer" parent="PressurePlate4" unique_id=880499427]
+wait_time = 2.5
+
+[node name="PressurePlate5" type="Area3D" parent="." unique_id=1987448076]
+transform = Transform3D(5.6959586, 0, 0, 0, 0.40564352, 0, 0, 0, 4.614889, -7.703121, 0, -20.954094)
+script = ExtResource("2_w0jp4")
+plateNumber = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate5" unique_id=409201272]
+material_override = SubResource("StandardMaterial3D_u72jw")
+mesh = SubResource("BoxMesh_bnk0g")
+surface_material_override/0 = SubResource("StandardMaterial3D_egiq8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate5" unique_id=349874787]
+shape = SubResource("BoxShape3D_uxmjt")
+
+[node name="Timer" type="Timer" parent="PressurePlate5" unique_id=993826851]
+wait_time = 2.5
+
+[node name="PressurePlate6" type="Area3D" parent="." unique_id=94104245]
+transform = Transform3D(5.6959586, 0, 0, 0, 0.40564352, 0, 0, 0, 4.614889, -24.420605, 0, -20.954094)
+script = ExtResource("2_w0jp4")
+plateNumber = 6
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate6" unique_id=1490130192]
+material_override = SubResource("StandardMaterial3D_rj1o0")
+mesh = SubResource("BoxMesh_ehrvu")
+surface_material_override/0 = SubResource("StandardMaterial3D_a14k8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate6" unique_id=641640774]
+shape = SubResource("BoxShape3D_uxmjt")
+
+[node name="Timer" type="Timer" parent="PressurePlate6" unique_id=858139918]
+wait_time = 2.5
+
+[node name="PressurePlate7" type="Area3D" parent="." unique_id=1048811832]
+transform = Transform3D(5.6959586, 0, 0, 0, 0.40564352, 0, 0, 0, 4.614889, -42.03869, 0, -20.954094)
+script = ExtResource("2_w0jp4")
+plateNumber = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate7" unique_id=263726379]
+material_override = SubResource("StandardMaterial3D_6684i")
+mesh = SubResource("BoxMesh_tsudy")
+surface_material_override/0 = SubResource("StandardMaterial3D_phshi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate7" unique_id=1754640855]
+shape = SubResource("BoxShape3D_uxmjt")
+
+[node name="Timer" type="Timer" parent="PressurePlate7" unique_id=1967211197]
+wait_time = 2.5
+
+[node name="Door" type="AnimatableBody3D" parent="." unique_id=282361745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2286434, 3.9041958, 0)
+script = ExtResource("2_2nuw4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Door" unique_id=1162446345]
+transform = Transform3D(30.407614, 0, 0, 0, 7.75868, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_uxmjt")
+surface_material_override/0 = SubResource("StandardMaterial3D_0oo8a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=1558891095]
+transform = Transform3D(30.968592, 0, 0, 0, 7.666612, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_itrvt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1822566180]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 33.91829, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=789700612]
+transform = Transform3D(-1, 0, -8.742278e-08, -2.561698e-08, 0.95610505, 0.2930241, 8.3585356e-08, 0.2930241, -0.95610505, 0, 15.560249, -66.552795)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_size = 0.97
+light_specular = 0.0
+spot_range = 80.869774
+spot_attenuation = 0.41
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=543349699]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1891101015]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="correct" from="." to="PressurePlate1" method="_on_puzzle_correct"]
+[connection signal="correct" from="." to="PressurePlate2" method="_on_puzzle_correct"]
+[connection signal="correct" from="." to="PressurePlate3" method="_on_puzzle_correct"]
+[connection signal="correct" from="." to="PressurePlate4" method="_on_puzzle_correct"]
+[connection signal="correct" from="." to="PressurePlate5" method="_on_puzzle_correct"]
+[connection signal="correct" from="." to="PressurePlate6" method="_on_puzzle_correct"]
+[connection signal="correct" from="." to="PressurePlate7" method="_on_puzzle_correct"]
+[connection signal="incorrect" from="." to="PressurePlate1" method="_on_puzzle_incorrect"]
+[connection signal="incorrect" from="." to="PressurePlate2" method="_on_puzzle_incorrect"]
+[connection signal="incorrect" from="." to="PressurePlate3" method="_on_puzzle_incorrect"]
+[connection signal="incorrect" from="." to="PressurePlate4" method="_on_puzzle_incorrect"]
+[connection signal="incorrect" from="." to="PressurePlate5" method="_on_puzzle_incorrect"]
+[connection signal="incorrect" from="." to="PressurePlate6" method="_on_puzzle_incorrect"]
+[connection signal="incorrect" from="." to="PressurePlate7" method="_on_puzzle_incorrect"]
+[connection signal="body_entered" from="PressurePlate1" to="PressurePlate1" method="_on_body_entered"]
+[connection signal="plate_pressed" from="PressurePlate1" to="." method="_on_pressure_plate_pressed"]
+[connection signal="timeout" from="PressurePlate1/Timer" to="PressurePlate1" method="_on_timer_timeout"]
+[connection signal="body_entered" from="PressurePlate2" to="PressurePlate2" method="_on_body_entered"]
+[connection signal="plate_pressed" from="PressurePlate2" to="." method="_on_pressure_plate_pressed"]
+[connection signal="timeout" from="PressurePlate2/Timer" to="PressurePlate2" method="_on_timer_timeout"]
+[connection signal="body_entered" from="PressurePlate3" to="PressurePlate3" method="_on_body_entered"]
+[connection signal="plate_pressed" from="PressurePlate3" to="." method="_on_pressure_plate_pressed"]
+[connection signal="timeout" from="PressurePlate3/Timer" to="PressurePlate3" method="_on_timer_timeout"]
+[connection signal="body_entered" from="PressurePlate4" to="PressurePlate4" method="_on_body_entered"]
+[connection signal="plate_pressed" from="PressurePlate4" to="." method="_on_pressure_plate_pressed"]
+[connection signal="timeout" from="PressurePlate4/Timer" to="PressurePlate4" method="_on_timer_timeout"]
+[connection signal="body_entered" from="PressurePlate5" to="PressurePlate5" method="_on_body_entered"]
+[connection signal="plate_pressed" from="PressurePlate5" to="." method="_on_pressure_plate_pressed"]
+[connection signal="timeout" from="PressurePlate5/Timer" to="PressurePlate5" method="_on_timer_timeout"]
+[connection signal="body_entered" from="PressurePlate6" to="PressurePlate6" method="_on_body_entered"]
+[connection signal="plate_pressed" from="PressurePlate6" to="." method="_on_pressure_plate_pressed"]
+[connection signal="timeout" from="PressurePlate6/Timer" to="PressurePlate6" method="_on_timer_timeout"]
+[connection signal="body_entered" from="PressurePlate7" to="PressurePlate7" method="_on_body_entered"]
+[connection signal="plate_pressed" from="PressurePlate7" to="." method="_on_pressure_plate_pressed"]
+[connection signal="timeout" from="PressurePlate7/Timer" to="PressurePlate7" method="_on_timer_timeout"]
