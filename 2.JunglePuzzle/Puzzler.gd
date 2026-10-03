@@ -11,7 +11,7 @@ signal incorrect(plateNumber)
 
 func _ready():
 	sequence.shuffle()
-	print(sequence)
+	#print(sequence)
 	LivesLabel.text = "Lives: " + str(lives)
 
 func _on_pressure_plate_pressed(plateNumber):

@@ -12,11 +12,11 @@ signal plate_pressed(plateNumber)
 func _on_body_entered(body: Node3D) -> void:
 	if body == Player and !pressed:
 		pressed = true
-		print("Plate ", plateNumber, " has been pressed")
+		#print("Plate ", plateNumber, " has been pressed")
 		plate_pressed.emit(plateNumber)
 
 func _on_puzzle_correct(correctPlateNumber):
-	print("Correct signal recieved by plate ", self.plateNumber)
+	#print("Correct signal recieved by plate ", self.plateNumber)
 	if correctPlateNumber == self.plateNumber:
 		#turn off "collision"
 		set_deferred("monitoring", false)
