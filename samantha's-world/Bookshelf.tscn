@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://ck85upkmrvdib"]
+
+[ext_resource type="Material" uid="uid://b3jmq8ek37sp7" path="res://BrownishWood.tres" id="1_6qlgb"]
+[ext_resource type="PackedScene" uid="uid://cwioucq3an8vh" path="res://Book.tscn" id="2_t3co2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtdp2"]
+size = Vector3(2.3710938, 2.8480835, 0.083984375)
+
+[sub_resource type="BoxMesh" id="BoxMesh_evgwd"]
+size = Vector3(0.092285156, 2.8480835, 0.60546875)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2k5cw"]
+size = Vector3(0.092285156, 2.8480835, 0.60546875)
+
+[sub_resource type="BoxMesh" id="BoxMesh_08w04"]
+size = Vector3(2.236084, 0.056762695, 0.51464844)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v2eh5"]
+size = Vector3(2.236084, 0.056762695, 0.51464844)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u2lrm"]
+size = Vector3(2.236084, 0.056762695, 0.51464844)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ow8tk"]
+size = Vector3(2.236084, 0.056762695, 0.51464844)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fr30b"]
+size = Vector3(2.236084, 0.056762695, 0.51464844)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtdp2"]
+size = Vector3(2.4096375, 2.8670654, 0.08276367)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qufpn"]
+size = Vector3(0.09375, 2.8504639, 0.60595703)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t3co2"]
+size = Vector3(0.09375, 2.8504639, 0.60595703)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6qlgb"]
+size = Vector3(2.244339, 0.053833008, 0.5149536)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_evgwd"]
+size = Vector3(2.244339, 0.053833008, 0.5149536)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2k5cw"]
+size = Vector3(2.244339, 0.053833008, 0.5149536)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_23nb4"]
+size = Vector3(2.244339, 0.053833008, 0.5149536)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ctwc3"]
+size = Vector3(2.244339, 0.053833008, 0.5149536)
+
+[node name="BookShelf" type="Node3D" unique_id=240774080]
+
+[node name="Back" type="MeshInstance3D" parent="." unique_id=574427467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06542969, 0.92404175, -0.4580078)
+mesh = SubResource("BoxMesh_qtdp2")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Left" type="MeshInstance3D" parent="." unique_id=1642793174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.204834, 0.92404175, -0.19726563)
+mesh = SubResource("BoxMesh_evgwd")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Right" type="MeshInstance3D" parent="." unique_id=155456174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1178305, 0.92404175, -0.19726563)
+mesh = SubResource("BoxMesh_2k5cw")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Top" type="MeshInstance3D" parent="." unique_id=363126316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044311523, 2.319891, -0.1586914)
+mesh = SubResource("BoxMesh_08w04")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Shelf1" type="MeshInstance3D" parent="." unique_id=1971043032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044311523, 1.7085543, -0.1586914)
+mesh = SubResource("BoxMesh_v2eh5")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Shelf2" type="MeshInstance3D" parent="." unique_id=342926398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044311523, 0.9663588, -0.1586914)
+mesh = SubResource("BoxMesh_u2lrm")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Shelf3" type="MeshInstance3D" parent="." unique_id=842717778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044311523, 0.20421004, -0.1586914)
+mesh = SubResource("BoxMesh_ow8tk")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Shelf4" type="MeshInstance3D" parent="." unique_id=1560123165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044311523, -0.44210982, -0.1586914)
+mesh = SubResource("BoxMesh_fr30b")
+surface_material_override/0 = ExtResource("1_6qlgb")
+
+[node name="Book" parent="." unique_id=1160702270 instance=ExtResource("2_t3co2")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.34457815, 1.3187271, -0.11620343)
+cover_color = Color(0.6524653, 0.10130941, 0.3316652, 1)
+
+[node name="Book2" parent="." unique_id=1418162374 instance=ExtResource("2_t3co2")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.18634626, 1.3187271, -0.11620343)
+cover_color = Color(0, 0.38585684, 0.60708, 1)
+
+[node name="Book3" parent="." unique_id=222990646 instance=ExtResource("2_t3co2")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.030074298, 1.3187271, -0.11620343)
+cover_color = Color(0.065211095, 0.43929136, 0.2134215, 1)
+
+[node name="Book4" parent="." unique_id=1405745084 instance=ExtResource("2_t3co2")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.4977852, 1.3187271, -0.11620343)
+cover_color = Color(0.688566, 0.06009025, 9.62615e-08, 1)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1693097839]
+
+[node name="BackWallCollider" type="CollisionShape3D" parent="StaticBody3D" unique_id=532810475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04121399, 0.9164429, -0.45861816)
+shape = SubResource("BoxShape3D_qtdp2")
+
+[node name="LeftWallCollider" type="CollisionShape3D" parent="StaticBody3D" unique_id=340529325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2033873, 0.9208541, -0.19702148)
+shape = SubResource("BoxShape3D_qufpn")
+
+[node name="RightWallCollider" type="CollisionShape3D" parent="StaticBody3D" unique_id=2039827280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1167402, 0.9208541, -0.19702148)
+shape = SubResource("BoxShape3D_t3co2")
+
+[node name="TopColldier" type="CollisionShape3D" parent="StaticBody3D" unique_id=873242548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042396545, 2.3228261, -0.16067505)
+shape = SubResource("BoxShape3D_6qlgb")
+
+[node name="Shelf1Colldier" type="CollisionShape3D" parent="StaticBody3D" unique_id=594261738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042396545, 1.7086965, -0.16067505)
+shape = SubResource("BoxShape3D_evgwd")
+
+[node name="Shelf2Colldier" type="CollisionShape3D" parent="StaticBody3D" unique_id=364566455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042396545, 0.9672196, -0.16067505)
+shape = SubResource("BoxShape3D_2k5cw")
+
+[node name="Shelf3Colldier" type="CollisionShape3D" parent="StaticBody3D" unique_id=1102265975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042396545, 0.20661163, -0.16067505)
+shape = SubResource("BoxShape3D_23nb4")
+
+[node name="Shelf4Colldier" type="CollisionShape3D" parent="StaticBody3D" unique_id=1409109665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042396545, -0.43961877, -0.16067505)
+shape = SubResource("BoxShape3D_ctwc3")

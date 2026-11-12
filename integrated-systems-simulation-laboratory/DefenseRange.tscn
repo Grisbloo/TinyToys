@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bq4ptl0qiw25"]
+
+[ext_resource type="PackedScene" uid="uid://blcloj0lylae6" path="res://ground.tscn" id="1_bquul"]
+[ext_resource type="PackedScene" uid="uid://bjqqydbi2mj4n" path="res://cwis.tscn" id="2_b700v"]
+[ext_resource type="PackedScene" uid="uid://bie1axs8shlol" path="res://bullet.tscn" id="3_b700v"]
+[ext_resource type="PackedScene" uid="uid://dcurv1oxgdfe6" path="res://target.tscn" id="4_2n1or"]
+
+[node name="DefenseRange" type="Node3D" unique_id=132872991]
+
+[node name="Ground" parent="." unique_id=838507877 instance=ExtResource("1_bquul")]
+
+[node name="CwisTurret" parent="." unique_id=2117633113 node_paths=PackedStringArray("target") instance=ExtResource("2_b700v")]
+target = NodePath("../Target")
+tracking_mode = 3
+prediction_horizon = 1.0
+firing_enabled = true
+rounds_per_second = 60.0
+
+[node name="Bullet" parent="." unique_id=301041833 instance=ExtResource("3_b700v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4132872, 1.2083066, -0.0009106295)
+visible = false
+
+[node name="Target" parent="." unique_id=1902841927 instance=ExtResource("4_2n1or")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.101652, 1.6501617, 0)
+flight_profile = 0
+affiliation = 0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1745113158]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.774842, 1.7109529, 1.6219826)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1881416962]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 10.27389, 0)

@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dg8uqen2osj17"]
+
+[ext_resource type="Material" uid="uid://b3jmq8ek37sp7" path="res://BrownishWood.tres" id="1_ntfgv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtdp2"]
+size = Vector3(1.1065674, 0.31689453, 1.9093018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gojvx"]
+size = Vector3(1.0724487, 0.20898438, 1.841156)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsunk"]
+albedo_color = Color(0.5426159, 0.5214291, 0.58337754, 1)
+roughness = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ntfgv"]
+size = Vector3(0.90734863, 0.046020508, 0.38378906)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mllhs"]
+albedo_color = Color(0.6052743, 0.6052743, 0.6052743, 1)
+roughness = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_pws24"]
+size = Vector3(1.0803223, 0.01727295, 1.2275391)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ax22"]
+albedo_color = Color(0.41256958, 0.4846627, 0.4108358, 1)
+roughness = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_5f5vm"]
+size = Vector3(1.0759888, 0.01727295, 1.8395996)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01hab"]
+albedo_color = Color(0.5074619, 0.49741334, 0.512348, 1)
+roughness = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtdp2"]
+size = Vector3(1.1187744, 0.4472046, 1.9160767)
+
+[node name="Bed" type="Node3D" unique_id=272041718]
+
+[node name="Frame" type="MeshInstance3D" parent="." unique_id=1943973240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05328369, 0.34155273, 0.45465088)
+mesh = SubResource("BoxMesh_qtdp2")
+surface_material_override/0 = ExtResource("1_ntfgv")
+
+[node name="Matress" type="MeshInstance3D" parent="." unique_id=866356038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05305326, 0.48141968, 0.45762634)
+mesh = SubResource("BoxMesh_gojvx")
+surface_material_override/0 = SubResource("StandardMaterial3D_vsunk")
+
+[node name="Pillow" type="MeshInstance3D" parent="." unique_id=47338887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.054936737, 0.6091653, -0.19677734)
+mesh = SubResource("BoxMesh_ntfgv")
+surface_material_override/0 = SubResource("StandardMaterial3D_mllhs")
+
+[node name="Blanket" type="MeshInstance3D" parent="." unique_id=270265586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.060278416, 0.5862142, 0.7613205)
+mesh = SubResource("BoxMesh_pws24")
+surface_material_override/0 = SubResource("StandardMaterial3D_7ax22")
+
+[node name="Sheet" type="MeshInstance3D" parent="." unique_id=1759986772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.052753806, 0.579209, 0.45627797)
+mesh = SubResource("BoxMesh_5f5vm")
+surface_material_override/0 = SubResource("StandardMaterial3D_01hab")
+
+[node name="LyingPosition" type="Marker3D" parent="." unique_id=516589798]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.5985577, 1.2073311)
+
+[node name="Approach" type="Marker3D" parent="." unique_id=244355210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7310257, 0.5985577, 0.66091865)
+
+[node name="Approach2" type="Marker3D" parent="." unique_id=596857013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.061910808, 0.5985577, 1.5343437)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=527729415]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=554932255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05255127, 0.41122437, 0.45803833)
+shape = SubResource("BoxShape3D_qtdp2")

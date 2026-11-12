@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://338jp1thocvy"]
+
+[ext_resource type="PackedScene" uid="uid://bjqqydbi2mj4n" path="res://cwis.tscn" id="1_1olk0"]
+[ext_resource type="PackedScene" uid="uid://blcloj0lylae6" path="res://ground.tscn" id="1_celxc"]
+[ext_resource type="PackedScene" uid="uid://dcurv1oxgdfe6" path="res://target.tscn" id="2_celxc"]
+[ext_resource type="Script" uid="uid://r4wgf8fwyjv2" path="res://preditiction_debug.gd" id="5_2p5yp"]
+[ext_resource type="Script" uid="uid://ciswbs6ofgf" path="res://tracking_debug.gd" id="5_44kai"]
+[ext_resource type="Script" uid="uid://clfmam0xtbsmr" path="res://forecast_benchmark.gd" id="7_07boq"]
+[ext_resource type="Script" uid="uid://cc8mly0dwl8gr" path="res://tracking_benchmark.gd" id="7_a44p4"]
+[ext_resource type="Script" uid="uid://caetqcr5vv3v4" path="res://filter_batch_benchmark.gd" id="9_a44p4"]
+[ext_resource type="Script" uid="uid://la7wyuumchax" path="res://adaptive_sensor_benchmark.gd" id="10_fqnpd"]
+[ext_resource type="Script" uid="uid://b2cree20feq3e" path="res://sensorhealth_comparison.gd" id="11_d7e2r"]
+[ext_resource type="Script" uid="uid://fwapxwxipd1w" path="res://tracking_manager.gd" id="12_e2aon"]
+[ext_resource type="Script" uid="uid://xm2774t3qf02" path="res://radar_noise_experiment.gd" id="12_xtx5t"]
+
+[node name="TestingRange" type="Node3D" unique_id=536056202]
+
+[node name="Ground" parent="." unique_id=838507877 instance=ExtResource("1_celxc")]
+
+[node name="CwisTurret" parent="." unique_id=2117633113 node_paths=PackedStringArray("target") instance=ExtResource("1_1olk0")]
+target = NodePath("../Target")
+tracking_mode = 4
+prediction_enabled = false
+show_prediction_marker = true
+
+[node name="Target" parent="." unique_id=1902841927 instance=ExtResource("2_celxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.221968, 2.616402, 0)
+flight_profile = 4
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2091805168]
+transform = Transform3D(-0.02266378, 0.39854234, -0.91687, 0.0014081374, 0.9171174, 0.39861512, 0.9997422, 0.0077430606, -0.021346547, -0.7840252, 2.9415088, 0.12104654)
+fov = 134.9
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=415999981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41.62961, 0)
+light_energy = 3.059
+light_indirect_energy = 10.03
+light_volumetric_fog_energy = 0.0
+
+[node name="PreditictionDebug" type="Node3D" parent="." unique_id=1082963474 node_paths=PackedStringArray("turret")]
+script = ExtResource("5_2p5yp")
+turret = NodePath("../CwisTurret")
+
+[node name="TrackingDebug" type="Node3D" parent="." unique_id=198326857 node_paths=PackedStringArray("target", "turret")]
+script = ExtResource("5_44kai")
+target = NodePath("../Target")
+turret = NodePath("../CwisTurret")
+
+[node name="TrackingBenchmark" type="Node3D" parent="." unique_id=1477337696 node_paths=PackedStringArray("target", "radar_sensor")]
+script = ExtResource("7_a44p4")
+target = NodePath("../Target")
+radar_sensor = NodePath("../CwisTurret/RadarSensor")
+
+[node name="ForecastBenchmark" type="Node3D" parent="." unique_id=189118850 node_paths=PackedStringArray("target", "turret")]
+script = ExtResource("7_07boq")
+target = NodePath("../Target")
+turret = NodePath("../CwisTurret")
+
+[node name="FilterBatchBenchmark" type="Node3D" parent="." unique_id=1329896798 node_paths=PackedStringArray("turret", "target")]
+script = ExtResource("9_a44p4")
+turret = NodePath("../CwisTurret")
+target = NodePath("../Target")
+enabled = false
+
+[node name="AdaptiveSensorBenchmark" type="Node3D" parent="." unique_id=425526168 node_paths=PackedStringArray("target", "turret")]
+script = ExtResource("10_fqnpd")
+target = NodePath("../Target")
+turret = NodePath("../CwisTurret")
+
+[node name="SensorhealthComparison" type="Node3D" parent="." unique_id=80771659 node_paths=PackedStringArray("target", "turret")]
+script = ExtResource("11_d7e2r")
+target = NodePath("../Target")
+turret = NodePath("../CwisTurret")
+
+[node name="TrackingManager" type="Node3D" parent="." unique_id=1973440962 node_paths=PackedStringArray("radar_sensor")]
+script = ExtResource("12_e2aon")
+radar_sensor = NodePath("../CwisTurret/RadarSensor")
+
+[node name="RadarNoiseExperiment" type="Node3D" parent="." unique_id=1224071789 node_paths=PackedStringArray("radar_sensor", "tracking_manager")]
+script = ExtResource("12_xtx5t")
+enabled = true
+radar_sensor = NodePath("../CwisTurret/RadarSensor")
+tracking_manager = NodePath("../TrackingManager")
+
+[editable path="CwisTurret"]
+[editable path="Target"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cwioucq3an8vh"]
+
+[ext_resource type="Script" uid="uid://dtah6iu3h2p58" path="res://book.gd" id="1_el5v3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_08w04"]
+size = Vector3(0.045959473, 0.21408081, 0.16845703)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtdp2"]
+size = Vector3(0.023010254, 0.21508789, 0.1628418)
+
+[node name="Book" type="Node3D" unique_id=1160702270]
+script = ExtResource("1_el5v3")
+
+[node name="Cover" type="MeshInstance3D" parent="." unique_id=1928415916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00061422586, 0.012329489)
+mesh = SubResource("BoxMesh_08w04")
+
+[node name="Pages" type="MeshInstance3D" parent="." unique_id=1691225564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00036621094, 0.00876829)
+mesh = SubResource("BoxMesh_qtdp2")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1380798408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.09205587)

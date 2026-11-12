@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://beovk72iur6gi"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qtdp2"]
+top_radius = 0.99560547
+bottom_radius = 0.99560547
+height = 0.02355957
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cywxr"]
+albedo_color = Color(0.30826572, 0.16383672, 0.1275922, 1)
+roughness = 0.0
+
+[node name="Rug" type="Node3D" unique_id=1308990207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9157412, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1243010442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8867798, 0)
+mesh = SubResource("CylinderMesh_qtdp2")
+surface_material_override/0 = SubResource("StandardMaterial3D_cywxr")

@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://cbkcuqetwo3t8"]
+
+[ext_resource type="Script" uid="uid://bngsk2gfk8n6y" path="res://samantha_visuals.gd" id="1_u6cnk"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rga1g"]
+radius = 0.1015625
+height = 0.42559814
+
+[sub_resource type="SphereMesh" id="SphereMesh_qtdp2"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qtdp2"]
+radius = 0.03857422
+height = 0.22195435
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_08w04"]
+radius = 0.033203125
+height = 0.19900513
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtdp2"]
+size = Vector3(0.08178711, 0.09082031, 0.0949707)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u6cnk"]
+radius = 0.1352539
+height = 0.52573776
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yh1hn"]
+radius = 0.08544922
+height = 0.32543945
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ugfbj"]
+radius = 0.061035156
+height = 0.22692871
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2qxkq"]
+radius = 0.061523438
+height = 0.26635742
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y8bpf"]
+radius = 0.25976563
+height = 1.5205078
+
+[node name="SamanthaVisuals" type="Node3D" unique_id=1189483393]
+script = ExtResource("1_u6cnk")
+
+[node name="Visuals" type="Node3D" parent="." unique_id=2061282270]
+
+[node name="Hips" type="Node3D" parent="Visuals" unique_id=895382080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64016724, 0)
+
+[node name="PelvisMesh" type="MeshInstance3D" parent="Visuals/Hips" unique_id=846370100]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0.0059661865, 0.037628174, -0.007232664)
+mesh = SubResource("CapsuleMesh_rga1g")
+
+[node name="TorsoJoint" type="Node3D" parent="Visuals/Hips" unique_id=278903724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10346973, 0)
+
+[node name="Neck" type="Node3D" parent="Visuals/Hips/TorsoJoint" unique_id=1675263428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5423552, 0)
+
+[node name="Head" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint/Neck" unique_id=373918888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10153425, 0)
+mesh = SubResource("SphereMesh_qtdp2")
+
+[node name="RightShoulder" type="Node3D" parent="Visuals/Hips/TorsoJoint" unique_id=71050850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46404147, -0.12694609)
+
+[node name="RightUpperArm" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint/RightShoulder" unique_id=273709079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08780599, -0.048489213)
+mesh = SubResource("CapsuleMesh_qtdp2")
+
+[node name="RightElbow" type="Node3D" parent="Visuals/Hips/TorsoJoint/RightShoulder" unique_id=601795019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18905222, -0.048489213)
+
+[node name="RightForearm" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint/RightShoulder/RightElbow" unique_id=275859819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09940618, 0)
+mesh = SubResource("CapsuleMesh_08w04")
+
+[node name="RightWrist" type="Node3D" parent="Visuals/Hips/TorsoJoint/RightShoulder/RightElbow" unique_id=1996644758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19138378, 0)
+
+[node name="RightHand" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint/RightShoulder/RightElbow/RightWrist" unique_id=218269916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0040410757, -0.036820173, -0.0014764369)
+mesh = SubResource("BoxMesh_qtdp2")
+
+[node name="LeftShoulder" type="Node3D" parent="Visuals/Hips/TorsoJoint" unique_id=202678516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46404147, 0.12510973)
+
+[node name="LeftUpperArm" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint/LeftShoulder" unique_id=509465719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08780599, 0.039188385)
+mesh = SubResource("CapsuleMesh_qtdp2")
+
+[node name="LeftElbow" type="Node3D" parent="Visuals/Hips/TorsoJoint/LeftShoulder" unique_id=2076092984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18905222, 0.039188385)
+
+[node name="LeftForearm" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint/LeftShoulder/LeftElbow" unique_id=851790407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09940618, 0)
+mesh = SubResource("CapsuleMesh_08w04")
+
+[node name="LeftWrist" type="Node3D" parent="Visuals/Hips/TorsoJoint/LeftShoulder/LeftElbow" unique_id=474047459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19138378, 0)
+
+[node name="LeftHand" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint/LeftShoulder/LeftElbow/LeftWrist" unique_id=173682373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0040410757, -0.036820173, -0.0014764369)
+mesh = SubResource("BoxMesh_qtdp2")
+
+[node name="TorsoMesh" type="MeshInstance3D" parent="Visuals/Hips/TorsoJoint" unique_id=660014001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2845477, 0)
+mesh = SubResource("CapsuleMesh_u6cnk")
+
+[node name="LeftHip" type="Node3D" parent="Visuals/Hips" unique_id=1330544663]
+
+[node name="LeftThighMesh" type="MeshInstance3D" parent="Visuals/Hips/LeftHip" unique_id=477445313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12777662, 0.10700691)
+mesh = SubResource("CapsuleMesh_yh1hn")
+
+[node name="LeftKnee" type="Node3D" parent="Visuals/Hips/LeftHip" unique_id=1211063472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2720731, 0.1068947)
+
+[node name="LeftShinMesh" type="MeshInstance3D" parent="Visuals/Hips/LeftHip/LeftKnee" unique_id=2042676159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12020314, 0)
+mesh = SubResource("CapsuleMesh_ugfbj")
+
+[node name="LeftAnkle" type="Node3D" parent="Visuals/Hips/LeftHip/LeftKnee" unique_id=273284643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31474006, 0)
+
+[node name="LeftFootMesh" type="MeshInstance3D" parent="Visuals/Hips/LeftHip/LeftKnee/LeftAnkle" unique_id=1018205091]
+transform = Transform3D(0.04754403, -0.9986047, -0.022981413, 0, -0.023007432, 0.9997353, -0.9988691, -0.047531445, -0.001093866, 0.048137777, 0.023932228, 0.0011590049)
+mesh = SubResource("CapsuleMesh_2qxkq")
+
+[node name="RightHip" type="Node3D" parent="Visuals/Hips" unique_id=101514488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.108980834)
+
+[node name="RightThighMesh" type="MeshInstance3D" parent="Visuals/Hips/RightHip" unique_id=442362051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12777662, -0.0165717)
+mesh = SubResource("CapsuleMesh_yh1hn")
+
+[node name="RightKnee" type="Node3D" parent="Visuals/Hips/RightHip" unique_id=1838889612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2720731, -0.019928008)
+
+[node name="RightShinMesh" type="MeshInstance3D" parent="Visuals/Hips/RightHip/RightKnee" unique_id=1626236923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12020314, 0)
+mesh = SubResource("CapsuleMesh_ugfbj")
+
+[node name="RightAnkle" type="Node3D" parent="Visuals/Hips/RightHip/RightKnee" unique_id=1786760431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31474006, 0)
+
+[node name="RightFootMesh" type="MeshInstance3D" parent="Visuals/Hips/RightHip/RightKnee/RightAnkle" unique_id=1948161203]
+transform = Transform3D(0.04754403, -0.9986047, -0.022981413, 0, -0.023007432, 0.9997353, -0.9988691, -0.047531445, -0.001093866, 0.048137777, 0.023932228, 0.0011590049)
+mesh = SubResource("CapsuleMesh_2qxkq")
+
+[node name="WholeBodySizer" type="MeshInstance3D" parent="Visuals" unique_id=1726355179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_y8bpf")

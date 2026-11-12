@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://4dikrulqcat2"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qtdp2"]
+top_radius = 0.2919922
+bottom_radius = 0.2919922
+height = 0.12399292
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1egxq"]
+albedo_color = Color(0.48235294, 0.4627451, 0.34509805, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u1ghj"]
+top_radius = 0.14355469
+bottom_radius = 0.14355469
+height = 0.4071045
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax40n"]
+albedo_color = Color(1, 0.40392157, 0.27450982, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7qsne"]
+top_radius = 0.2
+bottom_radius = 0.3
+height = 0.32711792
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtdp2"]
+albedo_color = Color(1, 1, 0.68235296, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qtdp2"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08w04"]
+emission_enabled = true
+emission = Color(0.73175967, 0.5193275, 0.2972825, 1)
+emission_energy_multiplier = 1.5
+
+[node name="BedsideLamp" type="Node3D" unique_id=276096300]
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=1613522917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7544708, 0)
+mesh = SubResource("CylinderMesh_qtdp2")
+surface_material_override/0 = SubResource("StandardMaterial3D_1egxq")
+
+[node name="Stem" type="MeshInstance3D" parent="." unique_id=1603651689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96124935, 0)
+mesh = SubResource("CylinderMesh_u1ghj")
+surface_material_override/0 = SubResource("StandardMaterial3D_ax40n")
+
+[node name="Shade" type="MeshInstance3D" parent="." unique_id=1222406192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.262345, 0)
+mesh = SubResource("CylinderMesh_7qsne")
+surface_material_override/0 = SubResource("StandardMaterial3D_qtdp2")
+
+[node name="Bulb" type="MeshInstance3D" parent="." unique_id=866055652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.262345, 0.000795275)
+mesh = SubResource("SphereMesh_qtdp2")
+surface_material_override/0 = SubResource("StandardMaterial3D_08w04")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=404454276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2130343, 0)
+light_color = Color(1, 0.8392157, 0.627451, 1)
+light_energy = 0.8
+light_size = 2.5

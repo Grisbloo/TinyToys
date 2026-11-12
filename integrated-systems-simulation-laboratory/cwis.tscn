@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bjqqydbi2mj4n"]
+
+[ext_resource type="Script" uid="uid://cw222lfl6762s" path="res://cwis_turret.gd" id="1_pxyxg"]
+[ext_resource type="PackedScene" uid="uid://bie1axs8shlol" path="res://bullet.tscn" id="2_1w1qf"]
+[ext_resource type="Script" uid="uid://dynsxym27qj57" path="res://radar_sensor.gd" id="2_84ras"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_08w04"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ntufh"]
+is_hemisphere = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1egxq"]
+height = 3.7719727
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_08w04"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qtdp2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08w04"]
+albedo_color = Color(1, 0.29411766, 1, 1)
+
+[node name="CwisTurret" type="Node3D" unique_id=2117633113 node_paths=PackedStringArray("yaw_pivot", "pitch_pivot", "radar_sensor", "prediction_marker", "muzzle")]
+script = ExtResource("1_pxyxg")
+yaw_pivot = NodePath("YawPivot")
+pitch_pivot = NodePath("YawPivot/PitchPivot")
+radar_sensor = NodePath("RadarSensor")
+tracking_mode = 1
+prediction_marker = NodePath("PredictionMarker")
+muzzle = NodePath("YawPivot/PitchPivot/Barrel/MuzzleMarker")
+projectile_scene = ExtResource("2_1w1qf")
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=1474506949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53490376, 0)
+mesh = SubResource("BoxMesh_08w04")
+
+[node name="YawPivot" type="Node3D" parent="." unique_id=1710708654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9759879, 0)
+
+[node name="DomeMesh" type="MeshInstance3D" parent="YawPivot" unique_id=793151463]
+transform = Transform3D(0.97249544, 0.03139203, 0, -0.030569652, 0.9986572, 0, 0, 0, 0.9464793, -0.013177227, 0.028835058, 0)
+mesh = SubResource("SphereMesh_ntufh")
+
+[node name="PitchPivot" type="Node3D" parent="YawPivot" unique_id=45461597]
+transform = Transform3D(0.9995063, 0.03141872, 0, -0.03141872, 0.9995063, 0, 0, 0, 1, -0.010371655, 0.4389968, 0)
+
+[node name="Barrel" type="MeshInstance3D" parent="YawPivot/PitchPivot" unique_id=540669787]
+transform = Transform3D(0.00451684, 0.5088713, 0, -0.1623666, 0.014156178, 0, 0, 0, 0.1660453, 0.92463374, 0.006792903, 0)
+mesh = SubResource("CylinderMesh_1egxq")
+
+[node name="MuzzleMarker" type="Marker3D" parent="YawPivot/PitchPivot/Barrel" unique_id=306510441]
+transform = Transform3D(-0.022239074, -6.1564803, 0, 1.9643607, -0.007095869, 0, 0, 0, 6.022454, 0.09441757, 1.8741264, 0)
+
+[node name="RadarSensor" type="Area3D" parent="." unique_id=657210060]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("2_84ras")
+measurement_error = 0.1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RadarSensor" unique_id=1457265951]
+transform = Transform3D(53.66474, 0, 0, 0, 39.45117, 0, 0, 0, 73.552185, 0, 0, 0)
+shape = SubResource("SphereShape3D_08w04")
+
+[node name="PredictionMarker" type="MeshInstance3D" parent="." unique_id=293549826]
+transform = Transform3D(0.019453134, 0, 0, 0, 0.014752569, 0, 0, 0, 0.019234503, 2.5571897, 1.4254948, 0.097658515)
+mesh = SubResource("SphereMesh_qtdp2")
+surface_material_override/0 = SubResource("StandardMaterial3D_08w04")

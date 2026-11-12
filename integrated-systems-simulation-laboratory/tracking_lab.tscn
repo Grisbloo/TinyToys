@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d2rcyprjm07ve"]
+
+[ext_resource type="Script" uid="uid://ciswbs6ofgf" path="res://tracking_debug.gd" id="1_teurj"]
+[ext_resource type="Script" uid="uid://cc8mly0dwl8gr" path="res://tracking_benchmark.gd" id="2_fj8no"]
+
+[node name="TrackingLab" type="Node3D" unique_id=400022440]
+script = ExtResource("2_fj8no")
+
+[node name="TrackingDebug" type="Node3D" parent="." unique_id=563521664]
+script = ExtResource("1_teurj")
+
+[node name="TrackingBenchmark" type="Node3D" parent="." unique_id=1597616980]
+script = ExtResource("2_fj8no")

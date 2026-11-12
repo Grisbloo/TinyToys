@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://c8grpsifgv8d5"]
+
+[ext_resource type="PackedScene" uid="uid://bbhxxxb06ymfc" path="res://Chair.tscn" id="1_4syeg"]
+[ext_resource type="Script" uid="uid://bg6vkn4xrsxp0" path="res://samantha's_apartment.gd" id="1_dbrgl"]
+[ext_resource type="PackedScene" uid="uid://y7slsbr5amw3" path="res://Table.tscn" id="2_obahk"]
+[ext_resource type="PackedScene" uid="uid://ck85upkmrvdib" path="res://Bookshelf.tscn" id="3_obahk"]
+[ext_resource type="PackedScene" uid="uid://beovk72iur6gi" path="res://Rug.tscn" id="4_5cq8f"]
+[ext_resource type="PackedScene" uid="uid://5wh2pmlx8rpi" path="res://Samantha.tscn" id="5_1ob3n"]
+[ext_resource type="PackedScene" uid="uid://dg8uqen2osj17" path="res://Bed.tscn" id="6_6lmr1"]
+[ext_resource type="PackedScene" uid="uid://drut0jg4ui2r5" path="res://bedside_table.tscn" id="7_jgbfx"]
+[ext_resource type="PackedScene" uid="uid://4dikrulqcat2" path="res://bedside_lamp.tscn" id="8_ascjt"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ascjt"]
+vertices = PackedVector3Array(1.1908468, 1.2495054, -0.10992944, 0.5908469, 1.2495054, -0.10992944, 0.29084682, 1.2495054, 0.39007056, -0.3091532, 1.2495054, 1.6900706, -0.009153247, 1.2495054, 1.9900706, 0.7908467, 1.2495054, 2.6900709, -0.009153247, 1.2495054, 2.6900709, -0.50915325, 1.2495054, 0.39007056, -0.9091532, 1.2495054, -0.10992944, -0.9091532, 1.2495054, 1.6900706, 1.0908469, 1.2495054, 2.9900706, 1.0908469, 1.2495054, 3.8900707, 3.8908467, 1.2495054, 3.8900707, 3.8908467, 1.2495054, -0.9099294, 3.4908466, 1.2495054, -0.4099294, 1.3908468, 1.2495054, -0.4099294, -0.9091532, 1.7495054, 3.4900706, -0.9091532, 1.7495054, 3.8900707, 0.29084682, 1.7495054, 3.8900707, 0.29084682, 1.7495054, 3.4900706)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 5), PackedInt32Array(5, 6, 4), PackedInt32Array(3, 9, 7), PackedInt32Array(7, 9, 8), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 14), PackedInt32Array(12, 14, 13), PackedInt32Array(2, 3, 7), PackedInt32Array(15, 14, 0), PackedInt32Array(0, 14, 5), PackedInt32Array(5, 14, 10), PackedInt32Array(19, 18, 16), PackedInt32Array(16, 18, 17)]
+geometry_parsed_geometry_type = 1
+cell_size = 0.1
+agent_radius = 0.4
+agent_max_climb = 0.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_jgbfx"]
+size = Vector3(0.1772461, 3.0014648, 2.008728)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vf1l"]
+albedo_color = Color(0.2784314, 0.5529412, 0.4745098, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2rhn"]
+size = Vector3(0.1772461, 3.0024414, 2.0111694)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7p3sh"]
+size = Vector3(0.1772461, 3.0014648, 2.008728)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ascjt"]
+size = Vector3(0.1772461, 3.0024414, 2.0111694)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4syeg"]
+size = Vector3(0.17578125, 3.0043335, 2.0009766)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65txu"]
+albedo_color = Color(0.61960787, 0.61960787, 0.5254902, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_obahk"]
+size = Vector3(0.17773438, 3.0019531, 2.0024414)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2rhn"]
+size = Vector3(0.17578125, 3.008667, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4syeg"]
+size = Vector3(0.17773438, 3.0077515, 2.0029297)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtdp2"]
+size = Vector3(2.003418, 0.18457031, 2.008789)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6byp8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08w04"]
+size = Vector3(2.0030518, 0.1850586, 2.006958)
+
+[sub_resource type="Environment" id="Environment_qtdp2"]
+background_mode = 1
+background_color = Color(0.9490196, 0.8862745, 0.84313726, 1)
+background_energy_multiplier = 0.23
+ambient_light_source = 2
+ambient_light_color = Color(0.32704863, 0.24823576, 0.28224775, 1)
+ambient_light_energy = 0.54
+
+[node name="Global" type="Node3D" unique_id=1026337642]
+
+[node name="Apartment" type="Node3D" parent="." unique_id=2123541269]
+script = ExtResource("1_dbrgl")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Apartment" unique_id=357475387]
+navigation_mesh = SubResource("NavigationMesh_ascjt")
+
+[node name="Furniture" type="Node3D" parent="Apartment/NavigationRegion3D" unique_id=1643718740]
+
+[node name="Chair" parent="Apartment/NavigationRegion3D/Furniture" unique_id=555800865 instance=ExtResource("1_4syeg")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.08324045, 1.3838906, -0.5514891)
+
+[node name="Table" parent="Apartment/NavigationRegion3D/Furniture" unique_id=867318697 instance=ExtResource("2_obahk")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.8860519, -1.0468254)
+
+[node name="BookShelf" parent="Apartment/NavigationRegion3D/Furniture" unique_id=240774080 instance=ExtResource("3_obahk")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 2.4154274, 1.3346722, -0.93921864)
+
+[node name="Rug" parent="Apartment/NavigationRegion3D/Furniture" unique_id=1308990207 instance=ExtResource("4_5cq8f")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.0181508, 2.7018514, 1.992346)
+
+[node name="Bed" parent="Apartment/NavigationRegion3D/Furniture" unique_id=272041718 instance=ExtResource("6_6lmr1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.79703075, 0.7728114, 3.7176678)
+
+[node name="BedsideTable" parent="Apartment/NavigationRegion3D/Furniture" unique_id=858356505 instance=ExtResource("7_jgbfx")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -0.8484719, 0.99681973, 2.4991786)
+
+[node name="BedsideLamp" parent="Apartment/NavigationRegion3D/Furniture" unique_id=276096300 instance=ExtResource("8_ascjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9308845, 0.68083584, 2.4541755)
+
+[node name="Walls&Floor" type="Node3D" parent="Apartment/NavigationRegion3D" unique_id=21935937]
+
+[node name="BackWallLeft" type="StaticBody3D" parent="Apartment/NavigationRegion3D/Walls&Floor" unique_id=1841375511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.004953, -1.0029643, 1.4328295, -0.0074528456)
+
+[node name="BackWallLeftMeshInstance3D" type="MeshInstance3D" parent="Apartment/NavigationRegion3D/Walls&Floor/BackWallLeft" unique_id=2090939358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41137695, 1.0007323, 0.504364)
+mesh = SubResource("BoxMesh_jgbfx")
+surface_material_override/0 = SubResource("StandardMaterial3D_3vf1l")
+
+[node name="BackWallLeftCollisionShape3D" type="CollisionShape3D" parent="Apartment/NavigationRegion3D/Walls&Floor/BackWallLeft" unique_id=744847166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41137695, 1.0012206, 0.50558466)
+shape = SubResource("BoxShape3D_h2rhn")
+
+[node name="FrontWallLeft" type="StaticBody3D" parent="Apartment/NavigationRegion3D/Walls&Floor" unique_id=1901140478]
+transform = Transform3D(-4.371139e-08, 0, 3.004953, 0, 1, 0, -1, 0, -1.3135066e-07, -0.020647526, 1.4328295, 3.5678592)
+
+[node name="FrontWallLeftMeshInstance3D" type="MeshInstance3D" parent="Apartment/NavigationRegion3D/Walls&Floor/FrontWallLeft" unique_id=1570176975]
+transform = Transform3D(1, 0, 4.689582e-13, 0, 1, 0, 0, 0, 1, -0.8694501, 0.99691427, 0.51792103)
+visible = false
+mesh = SubResource("BoxMesh_7p3sh")
+
+[node name="FrontWallLeftCollisionShape3D" type="CollisionShape3D" parent="Apartment/NavigationRegion3D/Walls&Floor/FrontWallLeft" unique_id=996742228]
+transform = Transform3D(1, 0, 1.2789769e-13, 0, 1, 0, 0, 0, 1, -0.8738384, 0.99850166, 0.51023394)
+shape = SubResource("BoxShape3D_ascjt")
+
+[node name="BackWallRight" type="StaticBody3D" parent="Apartment/NavigationRegion3D/Walls&Floor" unique_id=1627812717]
+transform = Transform3D(1.1924881e-08, 0, -3.0012083, 0, 1, 0, 1, 0, 3.578905e-08, -6.788969e-05, 1.4341589, -0.9994342)
+
+[node name="BackWallRightMeshInstance3D" type="MeshInstance3D" parent="Apartment/NavigationRegion3D/Walls&Floor/BackWallRight" unique_id=2025609929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41210943, 1.0021666, -0.5004882)
+mesh = SubResource("BoxMesh_4syeg")
+surface_material_override/0 = SubResource("StandardMaterial3D_65txu")
+
+[node name="BackWallRightCollisionShape3D" type="CollisionShape3D" parent="Apartment/NavigationRegion3D/Walls&Floor/BackWallRight" unique_id=73413651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41113287, 1.0009764, -0.50122064)
+shape = SubResource("BoxShape3D_obahk")
+
+[node name="FrontWallRight" type="StaticBody3D" parent="Apartment/NavigationRegion3D/Walls&Floor" unique_id=914893345]
+transform = Transform3D(-1, 0, -2.6237396e-07, 0, 1, 0, 8.742278e-08, 0, -3.0012083, 4.0066466, 1.4335229, -0.00092196465)
+
+[node name="FrontWallRightMeshInstance3D" type="MeshInstance3D" parent="Apartment/NavigationRegion3D/Walls&Floor/FrontWallRight" unique_id=671845923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41210938, 1.0043335, -0.5)
+visible = false
+mesh = SubResource("BoxMesh_h2rhn")
+
+[node name="FrontWallRightCollisionShape3D" type="CollisionShape3D" parent="Apartment/NavigationRegion3D/Walls&Floor/FrontWallRight" unique_id=1064697600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4111328, 1.0038757, -0.50146484)
+shape = SubResource("BoxShape3D_4syeg")
+
+[node name="Floor" type="StaticBody3D" parent="Apartment/NavigationRegion3D/Walls&Floor" unique_id=1125177201]
+transform = Transform3D(3.000217, 0, 0, 0, 1, 0, 0, 0, 3.0017452, 0, 0.8545183, 0)
+collision_layer = 2
+
+[node name="FloorMeshInstance3D" type="MeshInstance3D" parent="Apartment/NavigationRegion3D/Walls&Floor/Floor" unique_id=379247826]
+transform = Transform3D(0.9999656, 0, 0, 0, 1, 0, 0, 0, 0.9999656, 0.5016975, -0.012727737, 0.5043945)
+mesh = SubResource("BoxMesh_qtdp2")
+surface_material_override/0 = SubResource("StandardMaterial3D_6byp8")
+
+[node name="FloorCollisionShape3D" type="CollisionShape3D" parent="Apartment/NavigationRegion3D/Walls&Floor/Floor" unique_id=925673753]
+transform = Transform3D(0.999989, 0, 0, 0, 1, 0, 0, 0, 0.999989, 0.5015259, -0.012483597, 0.5034769)
+shape = SubResource("BoxShape3D_08w04")
+
+[node name="Camera3D" type="Camera3D" parent="Apartment" unique_id=1972127188]
+transform = Transform3D(0.73871046, -0.23597404, 0.6313662, 0.007713735, 0.9396115, 0.34215602, -0.67397887, -0.24788404, 0.69592106, 4.708283, 2.7761679, 4.831941)
+fov = 69.62765
+
+[node name="Lighting" type="Node3D" parent="Apartment" unique_id=1558917171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12792307, 1.9850819, -0.22794345)
+
+[node name="CeilingLight" type="OmniLight3D" parent="Apartment/Lighting" unique_id=1758524722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38385653, 1.5824866, 0.94451165)
+light_color = Color(1, 0.89411765, 0.76862746, 1)
+light_energy = 0.866
+shadow_enabled = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Apartment/Lighting" unique_id=1964330059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12792307, -1.9850819, 0.22794345)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Apartment" unique_id=309362043]
+environment = SubResource("Environment_qtdp2")
+
+[node name="SamanthaRoot" parent="Apartment" unique_id=1596571840 instance=ExtResource("5_1ob3n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1750093, 1.047342, 3.1826863)
+collision_mask = 3
